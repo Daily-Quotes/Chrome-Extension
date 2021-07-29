@@ -1,0 +1,42 @@
+:root {
+  --white : #FFF;
+  --dark  : #1F1F1F;
+  --gray  : #3a3a3a;
+  --blue  : #3677F3;
+  --red   : #FF2D55;
+}
+
+.white-color {
+  color : var(--white);
+}
+.white-background-color {
+  background : var(--white);
+}
+
+.dark-color {
+  color : var(--dark);
+}
+.dark-background-color {
+  background : var(--dark);
+}
+
+.gray-color {
+  color : var(--gray);
+}
+.gray-background-color {
+  background : var(--gray);
+}
+
+.blue-color {
+  color : var(--blue);
+}
+.blue-background-color {
+  background : var(--blue);
+}
+
+.red-color {
+  color : var(--red);
+}
+.red-background-color {
+  color : var(--red);
+}
