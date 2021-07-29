@@ -1,4 +1,24 @@
-body{
-  color: #FFF;
-  background: #1F1F1F;
+body {
+  color      : #FFF;
+  background : #1F1F1F;
+}
+
+#quote-container {
+  width     : 400px;
+  position  : absolute;
+  left      : 50%;
+  top       : 50%;
+  transform : translate(-50%, -50%);
+}
+
+#quote-container h2{
+  font-size: 2em;
+  text-align: justify;
+}
+
+#quote-container__bottom {
+  width           : 100%;
+  margin-top      : 15px;
+  display         : inline-flex;
+  justify-content : space-between;
 }
