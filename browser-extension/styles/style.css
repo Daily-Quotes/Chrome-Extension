@@ -34,11 +34,11 @@ input:focus{
 }
 
 #search-form{
-  width: 500px;
+  width: 550px;
 }
 
 #search-bar{
-  width: 100%;
+  width: 90%;
   padding: 0.5em 1em;
   border-radius: 25px;
   border: 0.5px white solid;
@@ -52,16 +52,12 @@ input:focus{
   width     : auto;
   position  : absolute;
   left      : 50%;
-  top       : 50%;
+  top       : 40%;
   transform : translate(-50%, -50%);
 }
 
 #center-container *{
   margin: auto;
-}
-
-#center-container form{
-  margin-bottom: 100px;
 }
 
 #center-container form input[type="submit"]{
@@ -72,6 +68,7 @@ input:focus{
 
 #quote-container{
   width: 400px;
+  margin-bottom: 70px;
 }
 
 #quote-container h2{
@@ -79,12 +76,20 @@ input:focus{
   text-align: justify;
 }
 
-#quote-current-likes{
+#quote-likes{
   margin-left: 10px;
 }
 
 #quote-container__bottom {
   width           : 100%;
   margin-top      : 15px;
-  justify-content : space-between;
+  justify-content : space-around;
+}
+
+#quote-container__bottom > *:first-child{
+  margin-left: 0;
+}
+
+#quote-container__bottom > *:last-child{
+  margin-right: 0;
 }
