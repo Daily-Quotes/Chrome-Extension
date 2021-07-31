@@ -74,21 +74,24 @@ $(function handleSubmit() {
     });
 });
 
+/*
 $(function handleLikeClick() {
     $('#like-button').on('click', function (e) {
         likesQuote = !likesQuote;
         changeLikeIcon()
     })
 })
+*/
 
 let likesQuote = false
 let currentLikes = 0
 
+// Set init Date
 showDate();
+// Updates date every second
 setInterval(showDate, 1000);
+// Get random quote
 fetchRandomQuote()
 
 // TODO: Check if user has account
 // TODO: Check if current user likes quote by fetch
-
-changeLikeIcon()
