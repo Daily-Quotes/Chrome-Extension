@@ -2,6 +2,10 @@ body{
   caret-color: white;
 }
 
+.hide, .hide::before{
+  display: none;
+}
+
 input{
   background: none;
   width: 100%;
@@ -33,6 +37,15 @@ input:focus{
   border-radius: 25px;
 }
 
+.justify-text{
+  text-align:justify;
+}
+.justify-text:after{
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
 #search-form{
   width: 550px;
 }
@@ -52,8 +65,8 @@ input:focus{
   width     : auto;
   position  : absolute;
   left      : 50%;
-  top       : 40%;
-  transform : translate(-50%, -50%);
+  bottom       : 60%;
+  transform : translate(-50%, 50%);
 }
 
 #center-container *{
@@ -68,7 +81,7 @@ input:focus{
 
 #quote-container{
   width: 400px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 }
 
 #quote-container h2{
@@ -92,4 +105,39 @@ input:focus{
 
 #quote-container__bottom > *:last-child{
   margin-right: 0;
+}
+
+#like-button{
+  position: relative;
+  margin-top: 30px;
+}
+
+#like-button > *{
+  position: absolute;
+  display: block;
+  transform: scale(1.5) translateX(-50%);
+  left: 50%;
+}
+
+#date-container{
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+}
+
+#date-day{
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#date-hour{
+  font-size: 2.5em;
+}
+
+#date-seconds{
+  font-size: 1em
+}
+
+#date-am_pm{
+  font-size: 1.5em;
 }

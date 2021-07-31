@@ -17,16 +17,19 @@
 <div class="f-source-code-pro"
      id="center-container">
     <div id="quote-container">
-        <h2 id="quote-text">All our dreams can come true, if we have the courage to pursue them.</h2>
-
+        <h2 id="quote-text">Loading ...</h2>
         <div class="inline-flex"
              id="quote-container__bottom">
             <div class="gray-color inline-flex">
                 <i class="fas fa-heart"></i>
-                <p id="quote-likes">10</p>
+                <p id="quote-likes">--</p>
             </div>
             <a class="blue-color"
-               id="quote-author">– Walt Disney</a>
+               id="quote-author"></a>
+        </div>
+        <div id="like-button">
+            <i class="far fa-heart fa-2xl" id="unliked-icon"></i>
+            <i class="fa fa-heart fa-2xl" id="liked-icon"></i>
         </div>
     </div>
     <form autocomplete="off"
@@ -46,6 +49,17 @@
         </div>
 
     </form>
+</div>
+<div class="f-source-code-pro" id="date-container">
+
+    <div class="inline-flex">
+        <h2 id="date-hour">12:00</h2>
+        <div>
+            <h4 class="blue-color" id="date-seconds">:00</h4>
+            <h4 id="date-am_pm">AM</h4>
+        </div>
+    </div>
+    <p class="light-gray-color justify-text" id="date-day">Tuesday 24</p>
 </div>
 <script src="index.js" type="text/javascript"></script>
 </body>
