@@ -19,6 +19,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
 ];
 
+const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const showDate = () => {
     let date = new Date()
@@ -32,7 +33,7 @@ const showDate = () => {
         am_pm = "PM";
     }
     if (hour === 0) {
-        hr = 12;
+        hour = 12;
         am_pm = "AM";
     }
 
@@ -41,7 +42,7 @@ const showDate = () => {
     sec = sec < 10 ? "0" + sec : sec;
 
     // Set Day
-    let currentDate = `${date.getDate()} ${monthNames[date.getMonth()]}  ${date.getFullYear()}`;
+    let currentDate = `${weekDays[date.getDay()]} ${date.getDate()} ${monthNames[date.getMonth()]}  ${date.getFullYear()}`;
     $('#date-day').text(currentDate);
 
     // Set Hour
