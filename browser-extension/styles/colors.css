@@ -3,8 +3,12 @@
   --dark       : #1F1F1F;
   --gray       : #646464;
   --light-gray : #b0b0b0;
-  --blue       : #3677F3;
   --red        : #FF2D55;
+  --orange     : #ff8c2d;
+  --yellow     : #ffd52d;
+  --green      : #a4e13d;
+  --blue       : #3da8e1;
+  --dark-blue  : #3677F3;
 }
 
 .white-color {
@@ -31,20 +35,48 @@
 .light-gray-color {
   color : var(--light-gray);
 }
-.light-gray-background-color{
-  background: var(--light-gray);
+.light-gray-background-color {
+  background : var(--light-gray);
 }
 
-.blue-color {
-  color : var(--blue);
+.red-color{
+  color: var(--red)
 }
-.blue-background-color {
-  background : var(--blue);
+.red-background-color{
+  background: var(--red);
 }
 
-.red-color {
-  color : var(--red);
+.orange-color{
+  color: var(--orange)
 }
-.red-background-color {
-  color : var(--red);
+.orange-background-color{
+  background: var(--orange)
+}
+
+.yellow-color{
+  color: var(--yellow)
+}
+.yellow-background-color{
+  background: var(--yellow)
+}
+
+.green-color{
+  color: var(--green)
+}
+.green-background-color{
+  background: var(--green)
+}
+
+.blue-color{
+  color: var(--blue)
+}
+.blue-background-color{
+  background: var(--blue)
+}
+
+.dark-blue-color{
+  color: var(--dark-blue)
+}
+.dark-blue-background-color{
+  background: var(--dark-blue);
 }
