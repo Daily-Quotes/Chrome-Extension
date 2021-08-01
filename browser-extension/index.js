@@ -1,5 +1,13 @@
 // Should only be triggered on first page load
 
+// Get highlightColor stored
+chrome.storage.sync.get(["highlightColor"], function (data) {
+    const savedColor = data["highlightColor"];
+    // Set selected color to elements with class "dynamic-color"
+    $(".dynamic-color").css("color", `var(--${savedColor})`);
+})
+
+// Fetch a random Quote from API
 const fetchRandomQuote = () => {
     fetch("http://localhost:3030/quotes/random",
         {

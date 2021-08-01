@@ -2,13 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="popup-style.css" >
-    <link rel="stylesheet" href="./../styles/colors.css">
-    <link rel="stylesheet" href="./../styles/fonts.css">
     <title>Quotes Popup</title>
+
+    <link href="./../styles/colors.css" rel="stylesheet">
+    <link href="./../styles/fonts.css" rel="stylesheet">
+    <link href="popup-style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body class="dark-background-color white-color">
-  <h1>Configuration</h1>
+<body class="f-source-code-pro dark-background-color white-color">
+<h1>Configuration</h1>
+<h5 class="light-gray-color">Developed by: <a class="dynamic-color">Jose Naime</a></h5>
+<div>
+    <div>
+        <h3>Highlight Color</h3>
+        <ul id="colors-list">
+            <li>
+                <button class="red-background-color" id="set-red-button" value="red"></button>
+            </li>
+            <li>
+                <button class="orange-background-color" id="set-orange-button" value="orange"></button>
+            </li>
+            <li>
+                <button class="yellow-background-color" id="set-yellow-button" value="yellow"></button>
+            </li>
+            <li>
+                <button class="green-background-color" id="set-green-button" value="green"></button>
+            </li>
+            <li>
+                <button class="blue-background-color" id="set-blue-button" value="blue"></button>
+            </li>
+            <li>
+                <button class="purple-background-color" id="set-purple-button" value="purple"></button>
+            </li>
+        </ul>
+    </div>
+</div>
 <script src="popup.js" type="text/javascript"></script>
 </body>
 </html>

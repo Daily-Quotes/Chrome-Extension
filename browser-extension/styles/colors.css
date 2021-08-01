@@ -7,8 +7,8 @@
   --orange     : #ff8c2d;
   --yellow     : #ffd52d;
   --green      : #a4e13d;
-  --blue       : #3da8e1;
-  --dark-blue  : #3677F3;
+  --blue       : #3677F3;
+  --purple     : #743de1;
 }
 
 .white-color {
@@ -39,44 +39,44 @@
   background : var(--light-gray);
 }
 
-.red-color{
-  color: var(--red)
+.red-color {
+  color : var(--red)
 }
-.red-background-color{
-  background: var(--red);
-}
-
-.orange-color{
-  color: var(--orange)
-}
-.orange-background-color{
-  background: var(--orange)
+.red-background-color {
+  background : var(--red);
 }
 
-.yellow-color{
-  color: var(--yellow)
+.orange-color {
+  color : var(--orange)
 }
-.yellow-background-color{
-  background: var(--yellow)
-}
-
-.green-color{
-  color: var(--green)
-}
-.green-background-color{
-  background: var(--green)
+.orange-background-color {
+  background : var(--orange)
 }
 
-.blue-color{
-  color: var(--blue)
+.yellow-color {
+  color : var(--yellow)
 }
-.blue-background-color{
-  background: var(--blue)
+.yellow-background-color {
+  background : var(--yellow)
 }
 
-.dark-blue-color{
-  color: var(--dark-blue)
+.green-color {
+  color : var(--green)
 }
-.dark-blue-background-color{
-  background: var(--dark-blue);
+.green-background-color {
+  background : var(--green)
+}
+
+.blue-color {
+  color : var(--blue)
+}
+.blue-background-color {
+  background : var(--blue)
+}
+
+.purple-color {
+  color : var(--purple)
+}
+.purple-background-color {
+  background : var(--purple);
 }
