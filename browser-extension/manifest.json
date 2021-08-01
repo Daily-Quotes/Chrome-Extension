@@ -5,12 +5,18 @@
   "version": "1.0",
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://kit.fontawesome.com; object-src 'self'",
-  "permissions": ["tabs"],
-  "chrome_url_overrides" : {
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "background": {
-    "scripts": ["Background/background.js"],
+    "scripts": [
+      "Background/background.js"
+    ],
     "persistent": false
   },
   "browser_action": {
