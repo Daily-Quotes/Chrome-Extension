@@ -12,8 +12,12 @@ body{
   margin: 25px;
 }
 
+p{
+  margin: 0
+}
+
 #highlight-colors{
-  margin: 2em 0;
+  margin: 3em 0;
 }
 
 #highlight-colors h3{
@@ -35,6 +39,7 @@ body{
   width: 20px;
   border: none;
   border-radius: 15px;
+  transition: all 0.5s;
 }
 #colors-list li button:hover{
   transform: scale(1.2);
