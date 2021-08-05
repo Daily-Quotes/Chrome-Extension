@@ -1,143 +1,211 @@
-body{
-  caret-color: white;
+body {
+	caret-color : white;
 }
 
-.hide, .hide::before{
-  display: none;
+.hide, .hide::before {
+	display : none;
 }
 
-input{
-  background: none;
-  width: 100%;
-  border: none;
+input {
+	background : none;
+	width      : 100%;
+	border     : none;
 }
 
-input:focus{
-  outline: none;
+input:focus {
+	outline : none;
 }
 
-.flex{
-  display: flex;
+.flex {
+	display : flex;
 }
 
-.inline-flex{
-  display: inline-flex;
+.inline-flex {
+	display : inline-flex;
 }
 
-.horizontal-flex{
-  display: flex;
-  flex-direction: column;
+.horizontal-flex {
+	display        : flex;
+	flex-direction : column;
 }
 
-.white-border{
-  border: 0.5px white solid;
+.white-border {
+	border : 0.5px white solid;
 }
 
-.rounded-corners{
-  border-radius: 25px;
+.rounded-corners {
+	border-radius : 25px;
 }
 
-.justify-text{
-  text-align:justify;
+.justify-text {
+	text-align : justify;
 }
-.justify-text:after{
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
-
-#search-form{
-  width: 550px;
+.justify-text:after {
+	content : "";
+	display : inline-block;
+	width   : 100%;
 }
 
-#search-bar{
-  width: 90%;
-  padding: 0.5em 1em;
-  border-radius: 25px;
-  border: 0.5px white solid;
+#search-form {
+	width : 550px;
 }
 
-#search-bar input{
-  margin-left: 5px;
+#search-bar {
+	width         : 90%;
+	padding       : 0.5em 1em;
+	border-radius : 25px;
+	border        : 0.5px white solid;
+}
+
+#search-bar input {
+	margin-left : 5px;
 }
 
 #center-container {
-  width     : auto;
-  position  : absolute;
-  left      : 50%;
-  bottom       : 60%;
-  transform : translate(-50%, 50%);
+	width     : auto;
+	position  : absolute;
+	left      : 50%;
+	bottom    : 60%;
+	transform : translate(-50%, 50%);
 }
 
-#center-container *{
-  margin: auto;
+#center-container * {
+	margin : auto;
 }
 
-#center-container form input[type="submit"]{
-  width: 25%;
-  padding: 0.5em 1em;
-  margin: 0;
+#center-container form input[type="submit"] {
+	width   : 25%;
+	padding : 0.5em 1em;
+	margin  : 0;
 }
 
-#quote-container{
-  width: 400px;
-  margin-bottom: 100px;
+#quote-container {
+	width         : 400px;
+	margin-bottom : 100px;
 }
 
-#quote-container h2{
-  font-size: 2em;
-  text-align: justify;
+#quote-container h2 {
+	font-size  : 2em;
+	text-align : justify;
 }
 
-#quote-likes{
-  margin-left: 10px;
+#quote-likes {
+	margin-left : 10px;
 }
 
 #quote-container__bottom {
-  width           : 100%;
-  margin-top      : 15px;
-  justify-content : space-around;
+	width           : 100%;
+	margin-top      : 15px;
+	justify-content : space-around;
 }
 
-#quote-container__bottom > *:first-child{
-  margin-left: 0;
+#quote-container__bottom > *:first-child {
+	margin-left : 0;
 }
 
-#quote-container__bottom > *:last-child{
-  margin-right: 0;
+#quote-container__bottom > *:last-child {
+	margin-right : 0;
 }
 
-#like-button{
-  position: relative;
-  margin-top: 30px;
+#like-button {
+	position   : relative;
+	margin-top : 30px;
 }
 
-#like-button > *{
-  position: absolute;
-  display: block;
-  transform: scale(1.5) translateX(-50%);
-  left: 50%;
+#like-button > * {
+	position  : absolute;
+	display   : block;
+	transform : scale(1.5) translateX(-50%);
+	left      : 50%;
 }
 
-#date-container{
-  position: absolute;
-  bottom: 100px;
-  left: 100px;
+#date-container {
+	position : absolute;
+	bottom   : 100px;
+	left     : 100px;
 }
 
-#date-day{
-  width: 100%;
-  margin-bottom: 5px;
+#date-day {
+	width         : 100%;
+	margin-bottom : 5px;
 }
 
-#date-hour{
-  font-size: 2.6em;
+#date-hour {
+	font-size : 2.6em;
 }
 
-#date-seconds{
-  font-size: 1em
+#date-seconds {
+	font-size : 1em
 }
 
-#date-am_pm{
-  font-size: 1.5em;
+#date-am_pm {
+	font-size : 1.5em;
 }
+
+#popup {
+	background      : rgba(0, 0, 0, 0.5);
+	backdrop-filter : blur(5px);
+	position        : absolute;
+	left            : 0;
+	top             : 0;
+	width           : 100%;
+	height          : 100%;
+}
+
+#popup .content-container {
+	box-shadow    : 0 5px 20px 2px rgba(0, 0, 0, 0.4);
+	position      : absolute;
+	left          : 50%;
+	top           : 50%;
+	width         : 250px;
+	height        : auto;
+	transform     : translate(-50%, -50%);
+	border-radius : 25px;
+	padding       : 30px;
+}
+
+#popup #close-popup {
+	font-size     : 40px;
+	position      : absolute;
+	display       : block;
+	right         : -15px;
+	top           : -15px;
+	border        : none;
+	border-radius : 25%;
+}
+
+#popup #quotes-seen-amount {
+	position  : absolute;
+	left      : 50%;
+	top       : 0;
+	font-size : 6em;
+	transform : translate(-50%, -50%)
+}
+#popup .container {
+	text-align : justify;
+	margin-top : 2em;
+}
+
+#popup .container h2 {
+	font-weight : 500;
+	font-size   : 2em;
+}
+
+#popup .container aside {
+	margin-top : 1em;
+	font-size  : 0.8em;
+}
+
+#popup .container .main-text {
+	margin : 2em 0;
+}
+
+#popup .container .main-text p {
+	line-height : 1.2em;
+}
+
+#buy-me-a-coffee img{
+	position : relative;
+	left : 50%;
+	transform:translateX(-50%);
+ }

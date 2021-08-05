@@ -7,6 +7,33 @@ chrome.storage.sync.get(["highlightColor"], function (data) {
     $(".dynamic-color").css("color", `var(--${savedColor})`);
 })
 
+// Get/Set tabsOpened store
+chrome.storage.sync.get(["tabsOpened"], function (data) {
+    const tabsOpened = data["tabsOpened"]
+
+    if (tabsOpened === 0 || tabsOpened === undefined){
+        // Init tabsOpened to 1
+        chrome.storage.sync.set({tabsOpened: 1}, function () {
+        });
+    } else {
+        // Check if visit no. 20
+        if (tabsOpened % 20 === 0){
+            $('#popup').removeClass('hide');
+            $('#quotes-seen-amount').text(tabsOpened)
+        }
+            // Save tabsOpened to storage
+            chrome.storage.sync.set({tabsOpened: tabsOpened + 1}, function () {
+            });
+    }
+})
+
+// Close Popup
+$(function handleClosePopup() {
+    $('#close-popup').on('click', () => {
+        $('#popup').addClass('hide')
+    })
+})
+
 // Fetch a random Quote from API
 const fetchRandomQuote = () => {
     fetch("http://localhost:3030/quotes/random",
