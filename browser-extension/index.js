@@ -11,19 +11,19 @@ chrome.storage.sync.get(["highlightColor"], function (data) {
 chrome.storage.sync.get(["tabsOpened"], function (data) {
     const tabsOpened = data["tabsOpened"]
 
-    if (tabsOpened === 0 || tabsOpened === undefined){
+    if (tabsOpened === 0 || tabsOpened === undefined) {
         // Init tabsOpened to 1
         chrome.storage.sync.set({tabsOpened: 1}, function () {
         });
     } else {
         // Check if visit no. 20
-        if (tabsOpened % 20 === 0){
+        if (tabsOpened % 20 === 0) {
             $('#popup').removeClass('hide');
             $('#quotes-seen-amount').text(tabsOpened)
         }
-            // Save tabsOpened to storage
-            chrome.storage.sync.set({tabsOpened: tabsOpened + 1}, function () {
-            });
+        // Save tabsOpened to storage
+        chrome.storage.sync.set({tabsOpened: tabsOpened + 1}, function () {
+        });
     }
 })
 
@@ -43,8 +43,17 @@ const fetchRandomQuote = () => {
         .then(res => res.json())
         .then(data => data[0])
         .then(quoteData => {
+            // Set author and handles click
+            const quoteAuthorElement = $('#quote-author');
+            quoteAuthorElement.text('- ' + quoteData.author);
+            quoteAuthorElement.on("click", () => {
+                window.open('https://google.com/search?q=' + quoteData.author)
+            })
+
+            // Set quote
             $('#quote-text').text(quoteData.text);
-            $('#quote-author').text('- ' + quoteData.author);
+
+            // Set current quote's likes
             currentLikes = quoteData.likes;
             $('#quote-likes').text(currentLikes);
         })
@@ -83,7 +92,7 @@ const showDate = () => {
     // Set Hour
     let currentTime = `${hour}:${min}`;
     $('#date-hour').text(currentTime);
-    $('#date-seconds').text(':'+sec);
+    $('#date-seconds').text(':' + sec);
     $('#date-am_pm').text(am_pm)
 }
 
@@ -98,6 +107,16 @@ const changeLikeIcon = () => {
 
     }
 }
+
+/*
+$(function handleSearchInputChange() {
+    $('#search-input').on("input", function (e) {
+        console.log(e.target.value);
+
+    })
+})
+*/
+
 
 $(function handleSubmit() {
     $('#search-form').on("submit", function (e) {

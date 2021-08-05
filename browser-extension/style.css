@@ -61,6 +61,10 @@ input:focus {
 	margin-left : 5px;
 }
 
+#search-input::-webkit-search-cancel-button {
+	-webkit-appearance : none;
+}
+
 #center-container {
 	width     : auto;
 	position  : absolute;
@@ -204,8 +208,8 @@ input:focus {
 	line-height : 1.2em;
 }
 
-#buy-me-a-coffee img{
-	position : relative;
-	left : 50%;
-	transform:translateX(-50%);
- }
+#buy-me-a-coffee img {
+	position  : relative;
+	left      : 50%;
+	transform : translateX(-50%);
+}
