@@ -9,41 +9,59 @@
     <link href="popup-style.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/356ff97aca.js"></script>
 </head>
-<body class="f-source-code-pro dark-background-color white-color">
+<body class="f-source-code-pro dark-background-color white-color dynamic-font">
 <h1>Configuration</h1>
-<p>All changes will apply to new tabs</p>
-<h5 class="light-gray-color">Developed by: <a class="dynamic-color">Jose Naime</a></h5>
+<p class="gray-color">All changes will apply to <b class="dynamic-color">new tabs</b></p>
 
-<div>
-    <div id="highlight-colors">
-        <h3>Highlight Color</h3>
-        <ul id="colors-list">
-            <li>
-                <button class="red-background-color" id="set-red-button" value="red"></button>
-            </li>
-            <li>
-                <button class="orange-background-color" id="set-orange-button" value="orange"></button>
-            </li>
-            <li>
-                <button class="yellow-background-color" id="set-yellow-button" value="yellow"></button>
-            </li>
-            <li>
-                <button class="green-background-color" id="set-green-button" value="green"></button>
-            </li>
-            <li>
-                <button class="blue-background-color" id="set-blue-button" value="blue"></button>
-            </li>
-            <li>
-                <button class="purple-background-color" id="set-purple-button" value="purple"></button>
-            </li>
-        </ul>
+<div id="configuration-sections">
+    <div>
+        <div id="highlight-colors">
+            <h3>Highlight Color</h3>
+            <ul id="colors-list">
+                <li>
+                    <button class="red-background-color" id="set-red-button" value="red"></button>
+                </li>
+                <li>
+                    <button class="orange-background-color" id="set-orange-button" value="orange"></button>
+                </li>
+                <li>
+                    <button class="yellow-background-color" id="set-yellow-button" value="yellow"></button>
+                </li>
+                <li>
+                    <button class="green-background-color" id="set-green-button" value="green"></button>
+                </li>
+                <li>
+                    <button class="blue-background-color" id="set-blue-button" value="blue"></button>
+                </li>
+                <li>
+                    <button class="purple-background-color" id="set-purple-button" value="purple"></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div id="font-selector">
+            <h3>Font</h3>
+            <div class="inline-flex horizontal-align space-around">
+                <i id="prev-font" class="fas fa-chevron-left fa-2x"></i>
+                <div id="current-font-container">
+                    <p id="current-font" class="dynamic-font">Font</p>
+                </div>
+                <i id="next-font" class="fas fa-chevron-right fa-2x"></i>
+            </div>
+        </div>
     </div>
 </div>
 
 <a id="buy-me-a-coffee" href="https://www.buymeacoffee.com/JoseNaime" target="_blank">
-    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=JoseNaime&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" alt="Buy me a coffe Jose Naime">
+    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=JoseNaime&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff"
+         alt="Buy me a coffee Jose Naime">
 </a>
+<h5 class="light-gray-color">Developed by: <a class="dynamic-color">Jose Naime</a></h5>
+
+<script src="../storage.js" type="text/javascript"></script>
 <script src="popup.js" type="text/javascript"></script>
 </body>
 </html>

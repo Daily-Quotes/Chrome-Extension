@@ -1,11 +1,8 @@
-const colorButtons = [
-    $('#set-red-button'),
-    $('#set-orange-button'),
-    $('#set-yellow-button'),
-    $('#set-green-button'),
-    $('#set-blue-button'),
-    $('#set-purple-button')
-];
+//
+//------- Color Buttons --------
+//
+
+getStoredHighlightColorPopup()
 
 const handleColorClick = (e) => {
     const selectedColor = e.target.value;
@@ -32,16 +29,52 @@ const handleColorClick = (e) => {
     }
 }
 
-// Get stored Highlight Color and set color button as active
-chrome.storage.sync.get(["highlightColor"], function (data) {
-    const savedColor = data["highlightColor"];
-
-    // Set selected color to elements with class "dynamic-color"
-    $(".dynamic-color").css("color", `var(--${savedColor})`);
-    // Add active class to current color
-    $(`#set-${savedColor}-button`).addClass("active");
-})
-
 colorButtons.map(colorButton => {
     colorButton.click(handleColorClick);
 })
+
+//
+//------- Font Change --------
+//
+getStoredFontIndex();
+
+$(function handleNextFontClick () {
+    $('#next-font').on('click', () => {
+        // Check if savedFontIndex is not the last element if so, reset to 0
+        if (savedFontIndex < fontsNames.length - 1){
+            savedFontIndex++;
+        }else{
+            savedFontIndex = 0
+        }
+
+        // Save savedFontIndex into chrome
+        chrome.storage.sync.set({fontIndex: savedFontIndex}, function () {
+            console.log('fontIndex is set to ' + savedFontIndex);
+        });
+
+        const currentFontElement = $("#current-font")
+        currentFontElement.css("font-family", `${fontsNames[savedFontIndex]}`);
+        currentFontElement.text(fontsNames[savedFontIndex])
+    })
+})
+
+$(function handlePrevFontClick () {
+    $('#prev-font').on('click', () => {
+        // Check if savedFontIndex is not the last element if so, reset to 0
+        if (savedFontIndex > 0){
+            savedFontIndex--;
+        }else{
+            savedFontIndex = fontsNames.length - 1;
+        }
+
+        // Save savedFontIndex into chrome
+        chrome.storage.sync.set({fontIndex: savedFontIndex}, function () {
+            console.log('fontIndex is set to ' + savedFontIndex);
+        });
+
+        const currentFontElement = $("#current-font")
+        currentFontElement.css("font-family", `${fontsNames[savedFontIndex]}`);
+        currentFontElement.text(fontsNames[savedFontIndex])
+    })
+})
+
