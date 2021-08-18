@@ -35,7 +35,7 @@ $(function handleClosePopup() {
 
 // Fetch a random Quote from API
 const fetchRandomQuote = () => {
-    fetch("http://localhost:3030/quotes/random",
+    fetch("https://murmuring-plateau-84095.herokuapp.com/quotes/random",
         {
             method: 'GET',
         })

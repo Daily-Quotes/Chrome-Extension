@@ -4,6 +4,11 @@
   "author": "Jose Naime",
   "version": "1.0",
   "manifest_version": 2,
+  "icons": {
+    "16": "Quotes16.png",
+    "48": "Quotes48.png",
+    "128": "Quotes128.png"
+  },
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://kit.fontawesome.com https://cse.google.com/cse.js; object-src 'self'",
   "permissions": [
     "tabs",

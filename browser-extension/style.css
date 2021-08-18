@@ -83,6 +83,14 @@ input:focus {
 	margin  : 0;
 }
 
+#quote-icon{
+	position: absolute;
+	z-index: -1;
+	opacity: 10%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+}
+
 #quote-container {
 	width         : 400px;
 	margin-bottom : 100px;

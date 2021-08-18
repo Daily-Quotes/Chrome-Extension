@@ -52,6 +52,8 @@ $(function handleNextFontClick () {
             console.log('fontIndex is set to ' + savedFontIndex);
         });
 
+        $(".dynamic-font").css("font-family", `${fontsNames[savedFontIndex]}`);
+
         const currentFontElement = $("#current-font")
         currentFontElement.css("font-family", `${fontsNames[savedFontIndex]}`);
         currentFontElement.text(fontsNames[savedFontIndex])
@@ -71,6 +73,8 @@ $(function handlePrevFontClick () {
         chrome.storage.sync.set({fontIndex: savedFontIndex}, function () {
             console.log('fontIndex is set to ' + savedFontIndex);
         });
+
+        $(".dynamic-font").css("font-family", `${fontsNames[savedFontIndex]}`);
 
         const currentFontElement = $("#current-font")
         currentFontElement.css("font-family", `${fontsNames[savedFontIndex]}`);

@@ -33,8 +33,8 @@ const fontsNames = [
     'Source Code Pro',
     'Source Sans Pro',
     'Arial',
+    'Noto Serif',
     'Andada Pro',
-    'MonteCarlo',
     'Oswald',
     'Style Script'
 ];
