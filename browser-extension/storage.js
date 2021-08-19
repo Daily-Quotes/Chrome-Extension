@@ -11,8 +11,13 @@ function getStoredHighlightColorIndex(){
     // Get highlightColor stored
     chrome.storage.sync.get(["highlightColor"], function (data) {
         const savedColor = data["highlightColor"];
-        // Set selected color to elements with class "dynamic-color"
-        $(".dynamic-color").css("color", `var(--${savedColor})`);
+
+        if (savedColor === undefined){
+            $(".dynamic-color").css("color", `var(--blue)`);
+        }else{
+            // Set selected color to elements with class "dynamic-color"
+            $(".dynamic-color").css("color", `var(--${savedColor})`);
+        }
     })
 }
 
@@ -21,10 +26,15 @@ function getStoredHighlightColorPopup(){
 chrome.storage.sync.get(["highlightColor"], function (data) {
     const savedColor = data["highlightColor"];
 
-    // Set selected color to elements with class "dynamic-color"
-    $(".dynamic-color").css("color", `var(--${savedColor})`);
-    // Add active class to current color
-    $(`#set-${savedColor}-button`).addClass("active");
+    if (savedColor === undefined){
+        $(".dynamic-color").css("color", `var(--blue)`);
+        $(`#set-blue-button`).addClass("active");
+    }else{
+        // Set selected color to elements with class "dynamic-color"
+        $(".dynamic-color").css("color", `var(--${savedColor})`);
+        // Add active class to current color
+        $(`#set-${savedColor}-button`).addClass("active");
+    }
 })
 }
 

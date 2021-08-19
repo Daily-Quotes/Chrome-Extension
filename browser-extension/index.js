@@ -52,9 +52,11 @@ const fetchRandomQuote = () => {
             // Set quote
             $('#quote-text').text(quoteData.text);
 
-            // Set current quote's likes
+
+            /* Set current quote's likes
             currentLikes = quoteData.likes;
             $('#quote-likes').text(currentLikes);
+            */
         })
 }
 
@@ -85,7 +87,7 @@ const showDate = () => {
     sec = sec < 10 ? "0" + sec : sec;
 
     // Set Day
-    let currentDate = `${weekDays[date.getDay()]} ${date.getDate()} ${monthNames[date.getMonth()]}  ${date.getFullYear()}`;
+    let currentDate = `${weekDays[date.getDay()]} ${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
     $('#date-day').text(currentDate);
 
     // Set Hour
@@ -95,6 +97,7 @@ const showDate = () => {
     $('#date-am_pm').text(am_pm)
 }
 
+/*
 const changeLikeIcon = () => {
     if (likesQuote) {
         if ($('#liked-icon').hasClass("hide")) $('#liked-icon').removeClass("hide");
@@ -106,6 +109,7 @@ const changeLikeIcon = () => {
 
     }
 }
+*/
 
 /*
 $(function handleSearchInputChange() {
@@ -116,6 +120,12 @@ $(function handleSearchInputChange() {
 })
 */
 
+$(function handleDateClick() {
+    $('#date-day').on("click", function () {
+        const searchTerm = $('#date-day').text().split(' ').slice(1,3) // Ex. [19, august]
+        window.open('https://www.onthisday.com/day/' + `${searchTerm[1]}/${searchTerm[0]}`)
+    })
+})
 
 $(function handleSubmit() {
     $('#search-form').on("submit", function (e) {
@@ -134,10 +144,11 @@ $(function handleLikeClick() {
         changeLikeIcon()
     })
 })
-*/
+
 
 let likesQuote = false
 let currentLikes = 0
+*/
 
 // Set init Date
 showDate();
