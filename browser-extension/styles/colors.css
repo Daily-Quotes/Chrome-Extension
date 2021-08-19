@@ -1,0 +1,82 @@
+:root {
+  --white      : #FFF;
+  --dark       : #1F1F1F;
+  --gray       : #646464;
+  --light-gray : #b0b0b0;
+  --red        : #FF2D55;
+  --orange     : #ff8c2d;
+  --yellow     : #ffd52d;
+  --green      : #a4e13d;
+  --blue       : #3677F3;
+  --purple     : #743de1;
+}
+
+.white-color {
+  color : var(--white);
+}
+.white-background-color {
+  background : var(--white);
+}
+
+.dark-color {
+  color : var(--dark);
+}
+.dark-background-color {
+  background : var(--dark);
+}
+
+.gray-color {
+  color : var(--gray);
+}
+.gray-background-color {
+  background : var(--gray);
+}
+
+.light-gray-color {
+  color : var(--light-gray);
+}
+.light-gray-background-color {
+  background : var(--light-gray);
+}
+
+.red-color {
+  color : var(--red)
+}
+.red-background-color {
+  background : var(--red);
+}
+
+.orange-color {
+  color : var(--orange)
+}
+.orange-background-color {
+  background : var(--orange)
+}
+
+.yellow-color {
+  color : var(--yellow)
+}
+.yellow-background-color {
+  background : var(--yellow)
+}
+
+.green-color {
+  color : var(--green)
+}
+.green-background-color {
+  background : var(--green)
+}
+
+.blue-color {
+  color : var(--blue)
+}
+.blue-background-color {
+  background : var(--blue)
+}
+
+.purple-color {
+  color : var(--purple)
+}
+.purple-background-color {
+  background : var(--purple);
+}

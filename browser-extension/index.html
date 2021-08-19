@@ -2,17 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Quotes Tab</title>
+    <title>Quotes Homepage</title>
+
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/colors.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/356ff97aca.js"></script>
 </head>
-<body>
+<body class="dark-background-color white-color dynamic-font">
+<div
+     id="center-container">
     <div id="quote-container">
-        <h2>All our dreams can come true, if we have the courage to pursue them.</h2>
-        <div id="quote-container__bottom">
-            <p>10</p>
-            <a class="author">– Walt Disney</a>
+        <image id="quote-icon" src="Icons/Quotes_logo.svg" alt="Quotes Logo"></image>
+        <h2 id="quote-text">Loading ...</h2>
+        <div class="inline-flex"
+             id="quote-container__bottom">
+            <div class="gray-color inline-flex">
+                <!-- Coming Soon
+                <i class="fas fa-heart"></i>
+                <p id="quote-likes">--</p>
+                -->
+            </div>
+            <a class="dynamic-color"
+               id="quote-author"
+            ></a>
+        </div>
+        <!-- Also coming soonx
+        <div id="like-button">
+            <i class="far fa-heart fa-2xl" id="unliked-icon"></i>
+            <i class="fa fa-heart fa-2xl" id="liked-icon"></i>
+        </div>
+        -->
+    </div>
+    <form autocomplete="off"
+          class="horizontal-flex"
+          id="search-form"
+          target="_self"
+            role="search">
+        <div class="inline-flex white-border rounded-corners"
+             id="search-bar">
+            <i class="fas fa-search"></i>
+            <input autocomplete="true"
+                   type="search"
+                    class="white-color"
+                   id="search-input"
+                   placeholder="Search in Google"
+                   >
+            <input class="white-color white-border rounded-corners"
+                   type="submit"
+                   value="Search">
+        </div>
+
+    </form>
+</div>
+<div id="date-container">
+
+    <div class="inline-flex">
+        <h2 id="date-hour">12:00</h2>
+        <div>
+            <h4 class="dynamic-color" id="date-seconds">:00</h4>
+            <h4 id="date-am_pm">AM</h4>
         </div>
     </div>
+    <p class="light-gray-color justify-text" id="date-day">Tuesday 24</p>
+</div>
+
+<div id="popup" class="hide">
+    <div class="content-container dark-background-color">
+        <i id="close-popup" class="far fa-times-circle fa-5x"></i>
+        <h1 id="quotes-seen-amount">00</h1>
+        <div class="container">
+            <h2>¡Quotes Seen!</h2>
+            <div class="main-text">
+                <p>This Chrome extension is completely <b class="dynamic-color">free</b> and made by one developer, any
+                    small donation will be very grateful !!</p>
+                <aside class="gray-color">(And it'll help to maintain the server running &#x1F605)</aside>
+            </div>
+            <a id="buy-me-a-coffee" href="https://www.buymeacoffee.com/JoseNaime" target="_blank">
+                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=JoseNaime&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff"
+                     alt="Buy me a coffee Jose Naime">
+            </a>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="wrapper">
+        <a class="float-right" href="https://github.com/Daily-Quotes/Web_Extension"><i class="fab fa-github fa-2x"></i></a>
+    </div>
+</footer>
+<script src="storage.js" type="text/javascript"></script>
+<script src="index.js" type="text/javascript"></script>
 </body>
 </html>
