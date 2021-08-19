@@ -4,6 +4,11 @@ If you want to get motivated or inspired on each new tab, Quotes Homepage will h
 Quotes Homepage it's completely FREE, as it doesn't contain any subscription or extra payment (btw, it doesn't have any Ads). That's why any small donation it's completely grateful. 
 
 ### Change-log
+- #### v1.1
+  - Unessesary permissions for chrome deleted
+  - User can click into date to show important events occured.
+  - Style fixed
+
 - #### v1.0
   - Display Random quote
   - User can customize quotes with predefined colors and fonts
