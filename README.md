@@ -4,10 +4,10 @@ If you want to get motivated or inspired on each new tab, Quotes Homepage will h
 Quotes Homepage it's completely FREE, as it doesn't contain any subscription or extra payment (btw, it doesn't have any Ads). That's why any small donation it's completely grateful. 
 
 ## How to Use It
-Currently, this extension it's only availabe in the chrome browser, you just need to and [click here](https://bit.ly/3y25Kx8) and install the extension. Open a new tab, and you'll see your first quote!
+Currently, this extension it's only availabe in the chrome browser, you just need to [click here](https://bit.ly/3y25Kx8) and install the extension. Open a new tab, and you'll see your first quote!
 
 ## Usage
-To use this extension, you dont need to do anything, you just need to open a new tab to see a new quote.
+To use this extension you just need to open a new tab to see a new quote.
 You can interact with the quote Author, the current date, and customize your quotes... here's an example:
 
 https://user-images.githubusercontent.com/34799483/132379082-9581f77b-b765-48e6-bb01-0efcccd2f129.mov
